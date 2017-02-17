@@ -24,6 +24,7 @@
 ```
 ~ npm install cl-router
 ```
+> It's an better idea use this module with [clmloader](https://github.com/conglai/clmloader)
 
 ## Example
 
@@ -55,14 +56,7 @@ const routerMap = {
         yield next;
         console.log('error after next');
       }]
-    },
-    example: {
-      commonMiddlewares: ['preA'],
-      middlewares: ['pre',function*(next){
-        this.num += 2;
-        yield next;
-      }]
-    },
+    }
   }
 };
 const routerM = routerFunc({
